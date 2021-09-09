@@ -7,7 +7,7 @@
 .button {
   position: relative;
   left: 25px;
-  top 50px;
+  top: 50px;
   
   display: inline-block;
   padding: 15px 25px;
@@ -30,6 +30,22 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+  
+let count = 0;
+const button = document.getElementById("increment");
+const textHolder = document.getElementById("count");
+textHolder.innerHTML = count;
+  
+button.addEventListener("click", function() {
+  textHolder.innerHTML = ++count;
+});
+ 
+  
+<h4>Current count: <span id="count">0</span></h4>
+<div class="container">
+  <button id="increment">Increment</button>
+</div>
+  
 </style>
 </head>
 <body>
