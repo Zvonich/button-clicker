@@ -5,3 +5,7 @@ function incrementButton() {
   console.log(value);
   document.getElementId("IncrementText").innerHTML = value;
 }
+
+
+
+<script src="incrementNumber.js"></script>

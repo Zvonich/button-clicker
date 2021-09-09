@@ -2,9 +2,8 @@
 <html>
 <head>
   <title> Button Clicker </title>
-  <script src="incrementNumber.js">
-                                 
-  </script>
+  
+                                
 <style>
 .button {
   
@@ -38,9 +37,16 @@
 </head>
 <body>
 
- <button class="button" onclick="incrementButton()">+1</button>
  <h2> a </h2>
  <h1 id="IncrementText"> 0 </h1>
+ <button class="button" onclick="incrementButton()">+1</button>
+
+document.getElementById('IncrementText').onclick=function(){
+  var value = parseInt(document.getElementById("value").innerHTML);
+  value++;
+  document.getElementById("value").innerHTML = value;
+}
+
 
 </body>
 </html>
