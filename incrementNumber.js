@@ -8,4 +8,3 @@ function incrementButton() {
 
 
 
-<script src="incrementNumber.js"></script>
