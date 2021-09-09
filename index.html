@@ -2,23 +2,23 @@
 <html>
 <head>
   let count = 0;
-const button = document.getElementById("increment");
-const button2 = document.getElementById("decrement");
-const textHolder = document.getElementById("count");
-textHolder.innerHTML = count;
+  const button = document.getElementById("increment");
+  const button2 = document.getElementById("decrement");
+  const textHolder = document.getElementById("count");
+  textHolder.innerHTML = count;
 
-button.addEventListener("click", function() {
-  textHolder.innerHTML = ++count;
-});
+  button.addEventListener("click", function() {
+    textHolder.innerHTML = ++count;
+  });
 
-button2.addEventListener("click", function() {
-  textHolder.innerHTML = --count;
-});
-<h4>Current count: <span id="count">0</span></h4>
-<div class="container">
-  <button id="decrement">Decrement</button>
-  <button id="increment">Increment</button>
-</div>
+  button2.addEventListener("click", function() {
+    textHolder.innerHTML = --count;
+  });
+  <h4>Current count: <span id="count">0</span></h4>
+  <div class="container">
+    <button id="decrement">Decrement</button>
+    <button id="increment">Increment</button>
+  </div>
   
   
   
