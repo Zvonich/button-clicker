@@ -1,0 +1,7 @@
+function IncrementButton() {
+var element = document.getElementById("IncrementText");
+var value = element.innerHTML;
+
+++value;
+
+document.getElementByID("IncrementText").innerHTML = value
