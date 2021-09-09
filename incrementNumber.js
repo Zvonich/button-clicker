@@ -3,7 +3,7 @@ function incrementButton() {
   var value = element.innerHTML;
   ++value;
   console.log(value);
-  document.getElementId("IncrementText").innerHTML = value;
+  document.getElementById("IncrementText").innerHTML = value;
 }
 
 
