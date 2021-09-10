@@ -9,6 +9,6 @@ function incrementButton1() {
 function incrementButton10() {
   var element = document.getElementById("IncrementText");
   var value = element.innerHTML;
-  10+value;
+  ++value;
   document.getElementById("IncrementText").innerHTML = value
 }
