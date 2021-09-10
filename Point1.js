@@ -6,14 +6,5 @@ function incrementButton1() {
   document.getElementById("IncrementText").innerHTML = value
 }
 
-function incrementButton10() {
-  let x = 5;
-  var element = document.getElementById("IncrementText");
-  var value = element.innerHTML;
-  x++value;
-  console.log(value);
-  document.getElementById("IncrementText").innerHTML = value
-}
-
 
 
