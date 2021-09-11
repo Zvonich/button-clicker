@@ -1,14 +1,11 @@
-function incrementButton1() {
-  var element = document.getElementById("IncrementText");
-  var value = element.innerHTML;
-  ++value;
-  document.getElementById("IncrementText").innerHTML = value
+let value = 0;
+function increment1() {
+  value++;
+  document.getElementById("counter").innerHTML = value;
 }
 
-
-function incrementButton10() {
-  var element = document.getElementById("IncrementText");
-  var value = element.innerHTML;
-  ++value;
-  document.getElementById("IncrementText").innerHTML = value
+let value = 0;
+function increment10() {
+  value += 10;
+  document.getElementById("counter").innerHTML = value;
 }
