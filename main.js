@@ -4,3 +4,5 @@ function cookieClick(number){
     cookies = cookies + 10;
     document.getElementById("cookies").innerHTML = cookies;
 };
+
+<p> a </p>
