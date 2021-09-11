@@ -5,4 +5,3 @@ function cookieClick(number){
     document.getElementById("cookies").innerHTML = cookies;
 };
 
-<p> a </p>
