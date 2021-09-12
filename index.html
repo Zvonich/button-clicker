@@ -1,19 +1,31 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="Interface.css" />
-     
 	</head>
 	<body>
-		<span>Points:</span> <span id="points">0</span>
+	  <div class="txt-group">
+		<span class="pointText">Points:</span> <span class="pointText" id="points">0</span>
 		<br />
-		<button id="1p" class="button" onclick="pointClick(1)">1</button>
+		<span class="cursorText">Cursors:</span> <span class="cursorText" id="cursors">0</span>
 		<br />
-		<button id="10p" class="button"onclick="pointClick(10)">10</button>
-		<br />
-		<button id="100p" class="button"onclick="pointClick(100)">100</button>
-		<br />
-		<button id="1000p" class="button"onclick="pointClick(1000)">1000</button>
-		<br />
+
+	  </div>
+	    <div class="btn-group">
+		  <button id="p1" class="pointButton"  onclick="pointClick(1)">1</button>
+		  <br />	    
+		  <button id="cur" class="cursorButton" onclick="buyCursor()">Buy Cursor</button>
+	      <br />
+		  <span class="cursorBuy">Cursor Cost:</span> <span class="cursorBuy" id="cursorCost">10</span>
+		  <br />
+		</div>
+		  <button id="p10" class="pointButton" onclick="pointClick(10)">10</button>
+	 	  <br />
+		  <button id="p100" class="pointButton" onclick="pointClick(100)">100</button>
+		  <br />
+		  <button id="p1000" class="pointButton" onclick="pointClick(1000)">1000</button>
+		  <br />
+	    
+
 		<script type="text/javascript" src="main.js"></script>
 		
 	</body>
