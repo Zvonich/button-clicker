@@ -1,20 +1,60 @@
 body {
     background-color: rgb(0, 0, 0);
   }
-span{ 
+.pointText{ 
     color:white;
-    position: relative;
-    left:50px;
-    font-size: 20px;
-    
+    font-size: 20px;   
 }
-.button {
-    position: relative;
-    left: 10px;
+.cursorText{
+  color:white;
+  font-size: 20px; 
+}
+.cursorBuy{
+  color:white;
+  font-size: 20px; 
+  position: relative;
+  left: -170px;
+}
+
+#p1{
+  position: relative;
+  top: 20px;                            /*temp fix*/
+}
+.btn-group button {
+  margin-right: 200px;
+
+  color: black; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+.pointButton {  
     margin: 10px;
     display: inline-block;
     padding: 15px 25px;
-    font-size: 24px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999; 
+   }
+  .pointButton:hover {background-color: #ffffff}
+  .pointButton:active {
+    background-color: #ffffff;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+.cursorButton {
+    margin: 10px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -24,14 +64,12 @@ span{
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-    
    }
-
-  .button:hover {background-color: #ffffff}
-
-  .button:active {
+ .CursorButton:hover {background-color: #ffffff}
+ .CursorButton:active {
     background-color: #ffffff;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-  
+
+
