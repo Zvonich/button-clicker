@@ -3,32 +3,59 @@ body {
   }
 .pointText{ 
     color:white;
-    font-size: 20px;   
+    font-size: 20px;                      /* amount of points text*/
 }
-.cursorText{
+.generatorText{
   color:white;
-  font-size: 20px; 
+  font-size: 15px;                             /*moves generator amount text next to the button*/
 }
-.cursorBuy{
+.generatorBuyText{
   color:white;
-  font-size: 20px; 
-  position: relative;
-  left: -170px;
+  font-size: 15px;                       /*moves generator cost text next to the button*/
 }
 
-#p1{
-  position: relative;
-  top: 20px;                            /*temp fix*/
-}
-.btn-group button {
-  margin-right: 200px;
 
-  color: black; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+.grid-container{
+  display: grid;
+   
+  grid-template-columns: 150px 120px 150px ;
+  grid-template-rows: auto;
 }
 
+.grid-item {
+  
+  margin: 7.5px;
+  width: 100px;
+  height: 50px;
+
+  
+}
+.item2{
+  width: 170px;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.item3{
+  grid-column: 1;
+}
+
+.item4 {
+  grid-column: 1;
+}
+
+.item5{
+  grid-column: 1;
+}
+
+.item6 {
+  grid-column: 1;
+}
+
+.item7 {
+  grid-column: 2;
+  grid-row: 2;
+}
 .pointButton {  
     margin: 10px;
     display: inline-block;
@@ -50,11 +77,11 @@ body {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-.cursorButton {
+.generatorButton {
     margin: 10px;
     display: inline-block;
     padding: 15px 25px;
-    font-size: 20px;
+    font-size: 10px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -65,8 +92,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 9px #999;
    }
- .CursorButton:hover {background-color: #ffffff}
- .CursorButton:active {
+ .generatorButton:hover {background-color: #ffffff}
+ .generatorButton:active {
     background-color: #ffffff;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
