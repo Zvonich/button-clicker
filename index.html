@@ -3,30 +3,39 @@
 		<link rel="stylesheet" type="text/css" href="Interface.css" />
 	</head>
 	<body>
-	  <div class="txt-group">
-		<span class="pointText">Points:</span> <span class="pointText" id="points">0</span>
-		<br />
-		<span class="cursorText">Cursors:</span> <span class="cursorText" id="cursors">0</span>
-		<br />
+		<div class="grid-container">
+			<div class="grid-item item1">
+				<span class="pointText">Points:</span> <span class="pointText" id="points">0</span> 
+			</div> 
+			<div class="grid-item item2">
+				<span class="generatorText">Generators:</span>
+				<span class="generatorText" id="generators">0</span>
+				<span class="generatorBuyText">Generator Cost:</span>
+				<span class="generatorBuyText" id="generatorCost">10</span>
+			</div>
+		   <div class="grid-item item3">
+			    <button id="p1" class="pointButton"  onclick="pointClick(1)">1</button>
+		   </div> 
+		   <div class="grid-item item4">
+			    <button id="p10" class="pointButton" onclick="pointClick(10)">10</button>
+		   </div>
+		   <div class="grid-item item5">
+			    <button id="p100" class="pointButton" onclick="pointClick(100)">100</button>
+		   </div>
+		   <div class="grid-item item6">
+			    <button id="p1000" class="pointButton" onclick="pointClick(1000)">1000</button>
+		   </div>
+			<div class="grid-item item7">
+				<button id="gen" class="generatorButton" onclick="buyGenerators()">Buy Generator</button>
+			</div>
+        </div>
 
-	  </div>
-	    <div class="btn-group">
-		  <button id="p1" class="pointButton"  onclick="pointClick(1)">1</button>
-		  <br />	    
-		  <button id="cur" class="cursorButton" onclick="buyCursor()">Buy Cursor</button>
-	      <br />
-		  <span class="cursorBuy">Cursor Cost:</span> <span class="cursorBuy" id="cursorCost">10</span>
-		  <br />
-		</div>
-		  <button id="p10" class="pointButton" onclick="pointClick(10)">10</button>
-	 	  <br />
-		  <button id="p100" class="pointButton" onclick="pointClick(100)">100</button>
-		  <br />
-		  <button id="p1000" class="pointButton" onclick="pointClick(1000)">1000</button>
-		  <br />
-	    
+
 
 		<script type="text/javascript" src="main.js"></script>
 		
 	</body>
 </html>
+
+
+<!-- -->
