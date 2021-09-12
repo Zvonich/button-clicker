@@ -12,9 +12,9 @@ var mainGameLoop = window.setInterval(function() {
   }, 1000)
 document.getElementById("p100").style.display = "none"
 var mainGameLoop = window.setInterval(function() {
-    if(points >= 100) {                                                           //change 100 when launching game
+    if(points >= 100) {                                                           //change 100 when launching game               //   CHANGE IF POINT >= 1
         document.getElementById("p100").style.display = "inline-block"
-    }
+    }                          
   }, 1000)
 document.getElementById("p1000").style.display = "none"
 var mainGameLoop = window.setInterval(function() {
@@ -23,20 +23,20 @@ var mainGameLoop = window.setInterval(function() {
       } 
     }, 1000)
 
-//cursors
-var cursors = 0;
+//generators
+var generators = 0;
 
-function buyCursor(){
-    var cursorCost = Math.floor(10 * Math.pow(1.1,cursors));     //works out the cost of this cursor
-    if(points >= cursorCost){                                   //checks that the player can afford the cursor
-        cursors = cursors + 1;                                   //increases number of cursors
-        points = points - cursorCost;                          //removes the cookies spent
-        document.getElementById('cursors').innerHTML = cursors;  //updates the number of cursors for the user
+function buyGenerators(){
+    var generatorCost = Math.floor(10 * Math.pow(1.1,generators));     //works out the cost of this generator
+    if(points >= generatorCost){                                   //checks that the player can afford the generator
+        generators = generators + 1;                                   //increases number of generators
+        points = points - generatorCost;                          //removes the cookies spent
+        document.getElementById('generators').innerHTML = generators;  //updates the number of generators for the user
         document.getElementById('points').innerHTML = points;  //updates the number of cookies for the user
      };
-     var nextCost = Math.floor(10 * Math.pow(1.1,cursors));       //works out the cost of the next cursor
-     document.getElementById('cursorCost').innerHTML = nextCost;  //updates the cursor cost for the user
+     var nextCost = Math.floor(10 * Math.pow(1.1,generators));       //works out the cost of the next generator
+     document.getElementById('generatorCost').innerHTML = nextCost;  //updates the generator cost for the user
  };   
 window.setInterval(function(){       
-     pointClick(cursors);       
+     pointClick(generators);       
 }, 1000);
