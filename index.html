@@ -1,9 +1,11 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="Interface.css" />
+		
 	</head>
 	<body>
 		<div class="grid-container">
+	
 			<div class="grid-item item1">
 				<span class="pointText">Points:</span> <span class="pointText" id="points">0</span> 
 			</div> 
@@ -12,6 +14,12 @@
 				<span class="generatorText" id="generators">0</span>
 				<span class="generatorBuyText">Generator Cost:</span>
 				<span class="generatorBuyText" id="generatorCost">10</span>
+			</div>
+			<div class="grid-item item2-1">
+				<span class="superGeneratorText">Super Generators:</span>
+				<span class="superGeneratorText" id="generators">0</span>
+				<span class="superGeneratorBuyText">Super Generator Cost:</span>
+				<span class="superGeneratorBuyText" id="generatorCost">10</span>
 			</div>
 		   <div class="grid-item item3">
 			    <button id="p1" class="pointButton"  onclick="pointClick(1)">1</button>
@@ -28,11 +36,14 @@
 			<div class="grid-item item7">
 				<button id="gen" class="generatorButton" onclick="buyGenerators()">Buy Generator</button>
 			</div>
+			<div class="grid-item item8">
+				<button id="sgen" class="generatorButton" onclick="buySuperGenerators()">Buy Super Generator</button>
+			</div>	
         </div>
 
-
-
 		<script type="text/javascript" src="main.js"></script>
+
+		
 		
 	</body>
 </html>
