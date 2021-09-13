@@ -1,52 +1,118 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="Interface.css" />
-		
-	</head>
-	<body>
-		<div class="grid-container">
-	
-			<div class="grid-item item1">
-				<span class="pointText">Points:</span> <span class="pointText" id="points">0</span> 
-			</div> 
-			<div class="grid-item item2">
-				<span class="generatorText">Generators:</span>
-				<span class="generatorText" id="generators">0</span>
-				<span class="generatorBuyText">Generator Cost:</span>
-				<span class="generatorBuyText" id="generatorCost">10</span>
-			</div>
-			<div class="grid-item item2-1">
-				<span class="superGeneratorText">Super Generators:</span>
-				<span class="superGeneratorText" id="generators">0</span>
-				<span class="superGeneratorBuyText">Super Generator Cost:</span>
-				<span class="superGeneratorBuyText" id="generatorCost">10</span>
-			</div>
-		   <div class="grid-item item3">
-			    <button id="p1" class="pointButton"  onclick="pointClick(1)">1</button>
-		   </div> 
-		   <div class="grid-item item4">
-			    <button id="p10" class="pointButton" onclick="pointClick(10)">10</button>
-		   </div>
-		   <div class="grid-item item5">
-			    <button id="p100" class="pointButton" onclick="pointClick(100)">100</button>
-		   </div>
-		   <div class="grid-item item6">
-			    <button id="p1000" class="pointButton" onclick="pointClick(1000)">1000</button>
-		   </div>
-			<div class="grid-item item7">
-				<button id="gen" class="generatorButton" onclick="buyGenerators()">Buy Generator</button>
-			</div>
-			<div class="grid-item item8">
-				<button id="sgen" class="generatorButton" onclick="buySuperGenerators()">Buy Super Generator</button>
-			</div>	
-        </div>
+body {
+    background-color: rgb(0, 0, 0);
+  }
+.pointText{ 
+    color:white;
+    font-size: 20px;                      /* amount of points text*/
+}
+.generatorText{
+  color:white;
+  font-size: 15px;                             /*moves generator amount text next to the button*/
+}
+.generatorBuyText{
+  color:white;
+  font-size: 15px;                       /*moves generator cost text next to the button*/
+}
+.superGeneratorText{
+  color:white;
+  font-size: 15px;                             /*moves super generator amount text next to the button*/
+}
+.superGeneratorBuyText{
+  color:white;
+  font-size: 15px;                       /*moves super generator cost text next to the button*/
+}
 
-		<script type="text/javascript" src="main.js"></script>
+.grid-container{
+  display: grid;
+   
+  grid-template-columns: 150px 120px 150px ;
+  grid-template-rows: auto;
+}
 
-		
-		
-	</body>
-</html>
+.grid-item {
+  
+  margin: 7.5px;
+  width: 100px;
+  height: 50px;
+}
+.item2{
+  width: 170px;
+  grid-column: 3;
+  grid-row: 2;
+}
+.item2-1{
+  width: 130px;
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.item3{
+  grid-column: 1;
+}
+
+.item4 {
+  grid-column: 1;
+}
+
+.item5{
+  grid-column: 1;
+}
+
+.item6 {
+  grid-column: 1;
+}
+
+.item7 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.item8 {
+  grid-column: 2;
+  grid-row: 3;
+}
+.pointButton {  
+    margin: 10px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999; 
+   }
+  .pointButton:hover {background-color: #ffffff}
+  .pointButton:active {
+    background-color: #ffffff;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+.generatorButton {
+    margin: 10px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+   }
+ .generatorButton:hover {background-color: #ffffff}
+ .generatorButton:active {
+    background-color: #ffffff;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 
-<!-- -->
+
