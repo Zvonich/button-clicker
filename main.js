@@ -1,52 +1,63 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="Interface.css" />
-		
-	</head>
-	<body>
-		<div class="grid-container">
-	
-			<div class="grid-item item1">
-				<span class="pointText">Points:</span> <span class="pointText" id="points">0</span> 
-			</div> 
-			<div class="grid-item item2">
-				<span class="generatorText">Generators:</span>
-				<span class="generatorText" id="generators">0</span>
-				<span class="generatorBuyText">Generator Cost:</span>
-				<span class="generatorBuyText" id="generatorCost">10</span>
-			</div>
-			<div class="grid-item item2-1">
-				<span class="superGeneratorText">Super Generators:</span>
-				<span class="superGeneratorText" id="generators">0</span>
-				<span class="superGeneratorBuyText">Super Generator Cost:</span>
-				<span class="superGeneratorBuyText" id="generatorCost">10</span>
-			</div>
-		   <div class="grid-item item3">
-			    <button id="p1" class="pointButton"  onclick="pointClick(1)">1</button>
-		   </div> 
-		   <div class="grid-item item4">
-			    <button id="p10" class="pointButton" onclick="pointClick(10)">10</button>
-		   </div>
-		   <div class="grid-item item5">
-			    <button id="p100" class="pointButton" onclick="pointClick(100)">100</button>
-		   </div>
-		   <div class="grid-item item6">
-			    <button id="p1000" class="pointButton" onclick="pointClick(1000)">1000</button>
-		   </div>
-			<div class="grid-item item7">
-				<button id="gen" class="generatorButton" onclick="buyGenerators()">Buy Generator</button>
-			</div>
-			<div class="grid-item item8">
-				<button id="sgen" class="generatorButton" onclick="buySuperGenerators()">Buy Super Generator</button>
-			</div>	
-        </div>
+var points = 0;
 
-		<script type="text/javascript" src="main.js"></script>
+function pointClick(number){
+    points = points + number;
+    document.getElementById("points").innerHTML = points;
+};   
 
-		
-		
-	</body>
-</html>
+document.getElementById("p10").style.display = "none"
+var mainGameLoop = window.setInterval(function() {
+    if(points >= 10) {                                                           //change 10 when launching game
+        document.getElementById("p10").style.display = "inline-block"
+    }
+  }, 1000)
+document.getElementById("p100").style.display = "none"
+var mainGameLoop = window.setInterval(function() {
+    if(points >= 100) {                                                           //change 100 when launching game               //   CHANGE IF POINT >= 1
+        document.getElementById("p100").style.display = "inline-block"
+    }                          
+  }, 1000)
+document.getElementById("p1000").style.display = "none"
+var mainGameLoop = window.setInterval(function() {
+      if(points >= 1000) {                                                           //change 1000 when launching game
+          document.getElementById("p1000").style.display = "inline-block"
+      } 
+    }, 1000)
+
+//generators
+var generators = 0;
+
+function buyGenerators(){
+    var generatorCost = Math.floor(10 * Math.pow(1.1,generators));     //works out the cost of this generator
+    if(points >= generatorCost){                                   //checks that the player can afford the generator
+        generators = generators + 1;                                   //increases number of generators
+        points = points - generatorCost;                          //removes the cookies spent
+        document.getElementById('generators').innerHTML = generators;  //updates the number of generators for the user
+        document.getElementById('points').innerHTML = points;  //updates the number of cookies for the user
+     };
+     var nextCost = Math.floor(10 * Math.pow(1.1,generators));       //works out the cost of the next generator
+     document.getElementById('generatorCost').innerHTML = nextCost;  //updates the generator cost for the user
+ };   
+window.setInterval(function(){       
+     pointClick(generators);       
+}, 1000);
 
 
-<!-- -->
+//supergenerator
+var superGenerators = 0;
+
+
+function buySuperGenerators(){
+    var superGeneratorCost = Math.floor(10 * Math.pow(1.1,superGenerators));     //works out the cost of this generator
+    if(generators >= superGeneratorCost){                                   //checks that the player can afford the generator
+        superGenerators = superGenerators + 1;                                   //increases number of generators
+        generators = generators - superGeneratorCost;                          //removes the cookies spent
+        document.getElementById('superGenerators').innerHTML = superGenerators;  //updates the number of generators for the user
+        document.getElementById('generators').innerHTML = generators;  //updates the number of cookies for the user
+     };
+     var nextCCost = Math.floor(10 * Math.pow(1.1,superGenerators));       //works out the cost of the next generator
+     document.getElementById('superGeneratorCost').innerHTML = nextCCost;  //updates the generator cost for the user
+ };   
+window.setInterval(function(){       
+          
+}, 1000);
