@@ -1,63 +1,64 @@
-var points = 0;
+var money = 0;
 
-function pointClick(number){
-    points = points + number;
-    document.getElementById("points").innerHTML = points;
+function moneyClick(number){
+    money = money + number;
+    document.getElementById("money").innerHTML = money;
+    // progress bar
+    var i = 0;
+      if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBar");
+      var width = 1;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          i = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+        }
+      }
+    }
 };   
 
-document.getElementById("p10").style.display = "none"
-var mainGameLoop = window.setInterval(function() {
-    if(points >= 10) {                                                           //change 10 when launching game
-        document.getElementById("p10").style.display = "inline-block"
-    }
-  }, 1000)
-document.getElementById("p100").style.display = "none"
-var mainGameLoop = window.setInterval(function() {
-    if(points >= 100) {                                                           //change 100 when launching game               //   CHANGE IF POINT >= 1
-        document.getElementById("p100").style.display = "inline-block"
-    }                          
-  }, 1000)
-document.getElementById("p1000").style.display = "none"
-var mainGameLoop = window.setInterval(function() {
-      if(points >= 1000) {                                                           //change 1000 when launching game
-          document.getElementById("p1000").style.display = "inline-block"
-      } 
-    }, 1000)
+            
 
-//generators
-var generators = 0;
+var one = 1;
 
-function buyGenerators(){
-    var generatorCost = Math.floor(10 * Math.pow(1.1,generators));     //works out the cost of this generator
-    if(points >= generatorCost){                                   //checks that the player can afford the generator
-        generators = generators + 1;                                   //increases number of generators
-        points = points - generatorCost;                          //removes the cookies spent
-        document.getElementById('generators').innerHTML = generators;  //updates the number of generators for the user
-        document.getElementById('points').innerHTML = points;  //updates the number of cookies for the user
-     };
-     var nextCost = Math.floor(10 * Math.pow(1.1,generators));       //works out the cost of the next generator
-     document.getElementById('generatorCost').innerHTML = nextCost;  //updates the generator cost for the user
- };   
+function ClickOne(){
+    var firstCost = Math.floor(10 * Math.pow(1.1,one));
+    if(money >= firstCost){                                   
+        one = one + 1;   
+        money = money - firstCost;         
+        document.getElementById('firstAmount').innerHTML = one;  
+        document.getElementById('money').innerHTML = money;  
+        var nextCost = Math.floor(10 * Math.pow(1.1,one));                           
+        document.getElementById('firstCost').innerHTML = nextCost; 
+    };  
+               
+ };                   
 window.setInterval(function(){       
-     pointClick(generators);       
-}, 1000);
+     moneyClick(one);                                                                 
+}, 1000);                
 
 
-//supergenerator
-var superGenerators = 0;
+var two = 0;
 
-
-function buySuperGenerators(){
-    var superGeneratorCost = Math.floor(10 * Math.pow(1.1,superGenerators));     //works out the cost of this generator
-    if(generators >= superGeneratorCost){                                   //checks that the player can afford the generator
-        superGenerators = superGenerators + 1;                                   //increases number of generators
-        generators = generators - superGeneratorCost;                          //removes the cookies spent
-        document.getElementById('superGenerators').innerHTML = superGenerators;  //updates the number of generators for the user
-        document.getElementById('generators').innerHTML = generators;  //updates the number of cookies for the user
-     };
-     var nextCCost = Math.floor(10 * Math.pow(1.1,superGenerators));       //works out the cost of the next generator
-     document.getElementById('superGeneratorCost').innerHTML = nextCCost;  //updates the generator cost for the user
- };   
+function ClickTwo(){
+    var secondCost = Math.floor(100 * Math.pow(1.1,two));
+    if(money >= secondCost){                                   
+        two = two + 1;   
+        money = money - secondCost;         
+        document.getElementById('secondAmount').innerHTML = two;  
+        document.getElementById('money').innerHTML = money;  
+        var next2Cost = Math.floor(100 * Math.pow(1.1,two));                           
+        document.getElementById('secondCost').innerHTML = next2Cost; 
+    };  
+               
+ };                   
 window.setInterval(function(){       
-          
-}, 1000);
+     moneyClick(two * 5);                                                                 
+}, 2000);                
+
+
