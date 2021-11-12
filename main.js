@@ -58,7 +58,7 @@ function ClickTwo(){
                
  };                   
 window.setInterval(function(){       
-     moneyClick(two * 5);                                                                 
+     moneyClickk(two * 5);                                                                 
 }, 1000);                
 
 
