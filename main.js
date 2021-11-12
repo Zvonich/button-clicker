@@ -19,7 +19,7 @@ window.setInterval(function(){
 
 var money = 0;
 
-function moneyClickk(number){
+function moneyClick(number){
     money = money + number;
     document.getElementById("money").innerHTML = money;
     // progress bar
