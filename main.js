@@ -1,28 +1,3 @@
-var money = 0;
-
-function moneyClick(number){
-    money = money + number;
-    document.getElementById("money").innerHTML = money;
-    // progress bar
-    var i = 0;
-      if (i == 0) {
-      i = 1;
-      var elem = document.getElementById("myBar");
-      var width = 1;
-      var id = setInterval(frame, 10);
-      function frame() {
-        if (width >= 100) {
-          clearInterval(id);
-          i = 0;
-        } else {
-          width++;
-          elem.style.width = width + "%";
-        }
-      }
-    }
-};   
-
-            
 
 var one = 1;
 
@@ -39,9 +14,34 @@ function ClickOne(){
                
  };                   
 window.setInterval(function(){       
-     moneyClick(one);                                                                 
+     moneyClick(one * 100);                                                                 
 }, 1000);                
 
+var money = 0;
+
+function moneyClick(number){
+    money = money + number;
+    document.getElementById("money").innerHTML = money;
+    // progress bar
+    var bar = 0;
+      if (bar == 0) {
+        bar = 1;
+      var elem = document.getElementById("myBar");
+      var width = 1;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          bar = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+        }
+      }
+    }
+};   
+
+            
 
 var two = 0;
 
@@ -59,6 +59,38 @@ function ClickTwo(){
  };                   
 window.setInterval(function(){       
      moneyClick(two * 5);                                                                 
-}, 2000);                
+}, 1000);                
+
+
+function moneyClickk(number){
+  money = money + number;
+  document.getElementById("money").innerHTML = money;
+    // progress bar
+    var bar = 0;
+    if (bar == 0) {
+      bar = 1;
+    var elem = document.getElementBydI("myBarr");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        bar = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+
+//document.getElementById("two").style.display = "none"
+//var mainGameLoop = window.setInterval(function() {
+ //   if(money >= 10) {                                                           
+ //      document.getElementById("two").style.display = "inline-block"
+  //  }
+ // }, 1000)
+
+
 
 
