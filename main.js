@@ -69,7 +69,7 @@ function moneyClickk(number){
     var bar = 0;
     if (bar == 0) {
       bar = 1;
-    var elem = document.getElementBydI("myBar1");
+    var elem = document.getElementById("myBar1");
     var width = 1;
     var id = setInterval(frame, 10);
     function frame() {
